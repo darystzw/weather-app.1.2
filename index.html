@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet"/>
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter City Name..." spellcheck="false" class="cityName" id="cityInput">
+            <label for="tempSymbol">°</label>
+            <select id="tempSymbol">
+                <option value="metric" >°C</option>
+                <option value="imperial" >°F</option>
+            </select>
+            <button type="button" class="searchBtn"><img src="icons/search.png" alt="search icon"></button>
+            <ul id="suggestions" class="suggestions-list"></ul>
+        </div>
+        <p class="noValue">Please! Enter a City name</p>
+    <section class="navbar">
+        <div class="name">
+            <div class="loc">
+                <img src="./icons/location.png" height="30px" alt="location icon"/>
+                <h2 class="location">location</h2>
+            </div>
+            <div class="day">
+                <img src="./icons/calendar.png" height="30px" alt="calendar icon"/>
+                <span class="week">Day,</span>
+                <span class="date">
+                    <sup id="dateNum">14</sup> 
+                    <sub id="monthText">May</sub>
+                </span>
+            </div>
+        </div>
+    </section>
+        <div class="weather">
+            <div class="image">
+                <img src="icons/Clouds.png" alt="cloudy day" class="weatherIcon">
+                <div class="feeling">
+                    <h1 class="temp">22°C</h1>
+                    <h2 class="city">Harare</h2>
+                </div>
+            </div>
+            <div class="details">
+                <div class="col">
+                    <img src="icons/humidity.png" alt="humidity icon">
+                    <div>
+                        <p class="descr">Humidity</p>
+                        <p class="humidity">12%</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="icons/wind.png" alt="humidity icon">
+                    <div>
+                        <p class="descr">Wind Speed</p>
+                        <p class="wind">12 km/h</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hrule">
+                <img src="./icons/minus.png" alt=""><h3>Weather Forecast</h3><img src="./icons/minus.png" alt="">
+            </div>
+            <section class="forecastSec">
+                <div class="forecast">
+                    <span class="date" id="date">
+                        <sup id="dateForecast">13</sup> 
+                        <sub id="monthForecast">May</sub>
+                    </span>
+                    <div class="forecastIcon">
+                        <img src="icons/Clouds.png" alt="cloudy day" height="70px" class="forecast5Icon">
+                    </div>
+                        <h1 class="tempForecast">22°C</h1>
+                </div>
+                <div class="forecast">
+                    <span class="date">
+                        <sup id="dateForecast">13</sup> 
+                        <sub id="monthForecast">May</sub>
+                    </span>
+                    <div class="forecastIcon">
+                        <img src="icons/Clouds.png" alt="cloudy day" height="70px" class="forecast5Icon">
+                    </div>
+                        <h1 class="tempForecast">22°C</h1>
+                </div>
+                <div class="forecast">
+                    <span class="date">
+                        <sup id="dateForecast">13</sup> 
+                        <sub id="monthForecast">May</sub>
+                    </span>
+                    <div class="forecastIcon">
+                        <img src="icons/Clouds.png" alt="cloudy day" height="70px" class="forecast5Icon">
+                    </div>
+                        <h1 class="tempForecast">22°C</h1>
+                </div>
+                <div class="forecast">
+                    <span class="date">
+                        <sup id="dateForecast">13</sup> 
+                        <sub id="monthForecast">May</sub>
+                    </span>
+                    <div class="forecastIcon">
+                        <img src="icons/Clouds.png" alt="cloudy day" height="70px" class="forecast5Icon">
+                    </div>
+                        <h1 class="tempForecast">22°C</h1>
+                </div>
+                <div class="forecast">
+                    <span class="date">
+                        <sup id="dateForecast">13</sup> 
+                        <sub id="monthForecast">May</sub>
+                    </span>
+                    <div class="forecastIcon">
+                        <img src="icons/Clouds.png" alt="cloudy day" height="70px" class="forecast5Icon">
+                    </div>
+                        <h1 class="tempForecast">22°C</h1>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="popover" id="popover">
+        <div class="choose">
+            <p>Use your Current Location ⚲ to get weather</p>
+            <div class="yes-no">
+                <button type="button" class="yes">👍</button>
+                <label for="yes">Yes</label>
+            </div>
+            <div class="yes-no">
+                <button type="button" class="no">⛔</button>
+                <label for="no">No</label>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
