@@ -186,7 +186,7 @@ const getForecast = async (cityName, units) => {
                 }
             });
     
-            renderForecast(Object.values(dailyData).slice(0, 8), cityName, units);
+            renderForecast(Object.values(dailyData).slice(0, 5), cityName, units);
         } catch (error) {
             console.error("Forecast fetch error:", error);
         }
