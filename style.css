@@ -303,22 +303,116 @@ body{
     font-size: 18px;
 }
 @media (max-width: 470px) {
-    .search input{
-        width: 70%;
+    .card {
+      padding: 20px 15px;
+      width: 95%;
+      margin: 50px auto 0;
     }
+  
+    /* .search {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      position: relative;
+    }
+  
+    .search input {
+      width: 100%;
+      margin-right: 0;
+      font-size: 16px;
+    }
+  
+    #tempSymbol {
+      position: relative;
+      right: 0;
+      width: 100%;
+      height: 40px;
+      font-size: 16px;
+    }
+  
+    .search label {
+      display: none;
+    }
+  
+    .search button {
+      width: 100%;
+      height: 45px;
+      border-radius: 30px;
+    } */
+    #tempSymbol {
+        right: 6.5rem;
+      }
+    .search input {
+        width: 100%;
+        margin-right: 0;
+        font-size: 16px;
+      }
+      .search button {
+        border-radius: 40%;
+      }
+    .suggestions-list {
+      width: 100%;
+      top: auto;
+      position: relative;
+    }
+  
+    .weather {
+      display: block;
+    }
+  
+    .image {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .weatherIcon {
+      width: 120px;
+      margin: auto;
+    }
+  
+    .temp {
+      font-size: 48px;
+    }
+  
+    .details {
+      gap: 10px;
+      padding: 0 5px;
+    }
+  
+    .forecastSec {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+  
+    .forecast {
+      min-width: 100px;
+      margin: 20px 5px;
+      padding: 10px;
+    }
+  
+    .popover {
+      padding: 15px;
+      width: 95%;
+    }
+  
+    .choose p {
+      font-size: 18px;
+    }
+  
+    .yes-no button {
+      height: 35px;
+      width: 35px;
+    }
+  
+    .yes-no label {
+      font-size: 16px;
+    }
+  }
+@media (max-width: 346px){
     .details{
-        overflow-y: auto;
+        flex-direction: column;
     }
-    .wind, .humidity{
-        font-size: 20px;
-        font-weight: 500;
-    }
-    .descr{
-        font-size: 14px;
-        font-weight: 400h;
-    }
-    .details .col img{
-        width: 50px;
-        margin-right: 10px;
+    .week{
+        display: none;
     }
 }
