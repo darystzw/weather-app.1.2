@@ -351,9 +351,7 @@ body{
         border-radius: 40%;
       }
     .suggestions-list {
-      width: 100%;
-      top: auto;
-      position: relative;
+      margin-top: -14px;
     }
   
     .weather {
