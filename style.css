@@ -354,10 +354,7 @@ body{
       margin-top: -14px;
     }
   
-    .weather {
-      display: block;
-    }
-  
+    
     .image {
       grid-template-columns: 1fr;
       text-align: center;
