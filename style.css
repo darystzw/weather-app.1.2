@@ -261,6 +261,10 @@ body{
     color: #eee;
     cursor: pointer;
 }
+.yes-no label:hover{
+  color: #fc7604;
+  text-shadow: 0 2px 0 #000;
+}
 .hrule{
     display: flex;
     justify-content: space-between;

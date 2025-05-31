@@ -20,7 +20,9 @@ const forecastSec = document.querySelector('.forecastSec');
 const deteForecast = document.querySelector('#dateForecast');
 const popover = document.querySelector('.popover');
 const locationYes = document.querySelector('.yes');
+const textLocationYes = document.querySelector('.chooseYes');
 const locationNo = document.querySelector('.no');
+const textLocationNo = document.querySelector('.chooseNo');
 const tempText = document.querySelector('.tempForecast');
 const tempSymbol = document.querySelector('#tempSymbol');
 
@@ -28,6 +30,7 @@ const apiUrl = `https://api.openweathermap.org/data/2.5/weather?`;
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?`;
 const apiKey = `34975d3489843481b4a7a97179bcf3df`;
 const mapboxToken = 'pk.eyJ1IjoiZGFyeXN0enciLCJhIjoiY21hbnBnN2ZwMDE0ZzJwcjB2OWZzOXludyJ9.KiyIE3zN0g9QNwV9d3Ey7g';
+document.getElementById("year").textContent = new Date().getFullYear();
 
 const getSuggestions = async (unit)=>{
     const query = cityInput.value.trim();
@@ -214,9 +217,9 @@ const getForecast = async (cityName, units) => {
             `;
             forecastSec.appendChild(cardForecast);
         });
-    }
-    
-locationYes.addEventListener('click', ()=>{
+    };
+
+const renderUi = ()=>{
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
             findMyCoordinates, 
@@ -233,11 +236,28 @@ locationYes.addEventListener('click', ()=>{
         nullCity.style.display = 'block';
         popover.style.display = 'none';
         card.style.display = 'block';
-    }    
-});
-locationNo.addEventListener('click', ()=>{
+    }  
+};
+const manualRenderUi = ()=>{
     card.style.display = 'block';
     popover.style.display ='none';
+};
+    
+textLocationYes.addEventListener('click', (e)=>{
+    e.preventDefault();
+    renderUi();  
+});
+locationYes.addEventListener('click', (e)=>{
+    e.preventDefault();
+    renderUi();  
+});
+textLocationNo.addEventListener('click', (e)=>{
+    e.preventDefault();
+    manualRenderUi();
+})
+locationNo.addEventListener('click', (e)=>{
+    e.preventDefault();
+    manualRenderUi();
 })
 cityInput.addEventListener('input', ()=>{
     const unit = tempSymbol.value;
