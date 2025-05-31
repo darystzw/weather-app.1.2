@@ -9,7 +9,7 @@
 <body>
     <div class="card">
         <div class="search">
-            <input type="text" placeholder="Enter City Name..." spellcheck="false" class="cityName" id="cityInput">
+            <input type="text" placeholder="Enter City Name..." spellcheck="false" class="cityName" id="cityInput" autocomplete="off">
             <label for="tempSymbol">°</label>
             <select id="tempSymbol">
                 <option value="metric" >°C</option>
@@ -119,17 +119,17 @@
     </div>
     <div class="popover" id="popover">
         <div class="choose">
-            <p>Use your Current Location ⚲ to get weather</p>
-            <div class="yes-no">
-                <button type="button" class="yes">👍</button>
-                <label for="yes">Yes</label>
-            </div>
-            <div class="yes-no">
-                <button type="button" class="no">⛔</button>
-                <label for="no">No</label>
-            </div>
+          <p>Would you like to use your current location to fetch the weather?</p>
+          <div class="yes-no">
+            <button type="button" class="yes" aria-label="Use current location">👍</button>
+            <label>Yes,<br>  use my current location</label>
+          </div>
+          <div class="yes-no">
+            <button type="button" class="no" aria-label="Enter location manually">⛔</button>
+            <label>No,<br> I’ll enter it manually</label>
+          </div>
         </div>
-    </div>
+      </div>      
     
     <script src="./script.js"></script>
 </body>
